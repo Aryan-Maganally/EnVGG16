@@ -1,20 +1,4 @@
 # EnVGG16
 🎵 EnVGG16: Enhanced VGG16 for Music Genre Classification
 
-EnVGG16 is a deep learning model built upon the classic VGG16 architecture, tailored specifically for the task of music genre classification using Mel-spectrograms as input. It leverages the power of transfer learning and introduces architectural enhancements to significantly improve classification accuracy and generalization.
-
-📌 Key Features:
-
-🎶 Designed for music genre classification using the GTZAN dataset (10 genres, 1000 clips).
-🎨 Input data consists of RGB spectrograms, resized and normalized in the style of ImageNet preprocessing.
-🧠 Uses VGG16 pretrained on ImageNet for feature extraction, with custom layers added for task-specific learning.
-⚙️ Fine-tuning applied to the last 8 layers of VGG16 for domain adaptation.
-💡 Integrates batch normalization, dropout, and AdamW optimizer with early stopping for efficient training.
-📈 Achieved a classification accuracy of 97.43%, outperforming ResNet34, ResNet50, AlexNet, and baseline VGG16.
-
-📊 Results (on GTZAN dataset):
-
-Accuracy:	97.43%
-Macro F1-Score: 0.98
-Per-class F1: Most genres achieved F1 = 1.00
-Lowest performance: Blues (F1 = 0.86), Classical (F1 = 0.93)
+The EnVGG16 model is specifically designed for music genre classification using the GTZAN dataset, which consists of 1,000 audio clips across 10 genres. It takes RGB spectrogram images as input, resized and normalized in accordance with ImageNet preprocessing standards. The model leverages the pretrained VGG16 network as a feature extractor and adds custom layers to adapt to the specific task of audio-based genre classification. To enhance performance, fine-tuning is applied to the last 8 layers of VGG16, allowing for better domain adaptation. The architecture also incorporates batch normalization and dropout for regularization, while the AdamW optimizer and early stopping are used to ensure efficient and stable training. This combination of enhancements enabled EnVGG16 to achieve a classification accuracy of 97.43%, outperforming other models such as ResNet34, ResNet50, AlexNet, and even the original VGG16 baseline. The model also attained a macro F1-score of 0.98, with most genres achieving a perfect F1-score of 1.00. The only exceptions were blues and classical genres, which had slightly lower F1-scores of 0.86 and 0.93, respectively.
